@@ -7,14 +7,17 @@
 
 using namespace std;
 
-class UserSystem{
+class UserSystem
+{
 private:
-    string* usernames;
-    string* passwords;
+    string *usernames;
+    string *passwords;
     int userCount;
     string filename;
+
     void loadUsers();
     void saveUsers();
+    bool usernameExists(string username);
 
 public:
     UserSystem();
@@ -22,8 +25,8 @@ public:
 
     void registerUser();
     bool loginUser();
-
     void displayUsers();
 };
+////
 
 #endif
